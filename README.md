@@ -21,7 +21,7 @@ This is the documentation for the Annotator App, The Viewer, setting up the data
     
        CREATE DATABASE databasename;
   
- * Here is the .sql file containing the schema of the database. Copy the tables from this sql file create a MYSQL database.
+ * Here is the .sql file containing the schema of the database. Copy the tables from this sql file to the database created.
  * Using SQL insert into the tables the data that you have.
  * This database contains the schema of all the tables mentioned above and is now ready for the applications.
  
