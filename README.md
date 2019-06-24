@@ -21,22 +21,29 @@ This is the documentation for the Annotator App, The Viewer, setting up the data
     
        CREATE DATABASE databasename;
   
- * Here is the .sql file containing the schema of the database. Copy the tables from this sql file to the database created.
+ * The dump.sql file contains the schema of the database. Copy the tables from this sql file to the database created using the command:
+ 
+       mysql -u username -p databasename < dump.sql
+       
  * Using SQL insert into the tables the data that you have.
- * This database contains the schema of all the tables mentioned above and is now ready for the applications.
+ * This database contains the data required and is now ready for the applications.
  
 ###  How to setup the Annotation App
 This is the app which serves the front-end web-based annotation interface and manages the back-end DB in our HInDoLA system. 
 
 * Set up the database as shown above.
+* Clone or download the Hindola-backend repository from    https://github.com/ihdia
 * In the Annotation_app folder open the app.py file and change the database name to the name which was created. Also change the username name and password in the app.py file to the ones which were created while setting up the database.
 
 #### * To setup the backend server on local system
-1. Download the repository and install the prerequisites mentioned in Annotation_App/requirements.txt using the command:
+1. Install the prerequisites mentioned in Annotation_App/requirements.txt using the command:
       
         pip install -r requirements.txt
 2. Go to the Annotation_App folder and locate app.py
-3. Run ```python3 app.py ```
+3. Change the host to "127.0.0.1" and the port number to 5000 at the end of the app.py file.
+4. Run ```python3 app.py ```
+
+Now in your browser go to the site localhost:5000
 
 The Annotation App is to manage the manuscripts annotations through an interactive GUI. Implemented in Flask, the App has useful features to annotate images from large manuscripts libraries.
 
