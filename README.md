@@ -24,6 +24,11 @@ This is the documentation for the Annotator App, The Viewer, setting up the data
  * The dump.sql file contains the schema of the database. Copy the tables from this sql file to the database created using the command:
  
        mysql -u username -p databasename < dump.sql
+ *  If there is another database serving a remote website then use the following commands:
+
+        mysqldump --column-statistics=0 -u remoteusername -p -h your.remotesite.com localdatabasename > dump.sql
+   
+        mysql -u localusername -p local databasename < dump.sql
        
  * Using SQL insert into the tables the data that you have.
  * This database contains the data required and is now ready for the applications.
