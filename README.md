@@ -39,16 +39,18 @@ This is the app which serves the front-end web-based annotation interface and ma
 * Set up the database as shown above.
 * Clone or download the Hindola-backend repository from    https://github.com/ihdia
 * In the Annotation_app folder open the app.py file and change the database name to the name which was created. Also change the username name and password in the app.py file to the ones which were created while setting up the database.
-
+* In the Annotation_App, go to myproject, in the templates folder, go to annotationtool.html file:
+  * Comment line number 1343 and in the line 1342 give the address with the port number where you want to run the app.
+  * Repeat the same step for line number for 8633 and 8632.
 #### * To setup the backend server on local system
 1. Install the prerequisites mentioned in Annotation_App/requirements.txt using the command:
       
         pip install -r requirements.txt
 2. Go to the Annotation_App folder and locate app.py
-3. Change the host to "127.0.0.1" and the port number to 5000 at the end of the app.py file.
+3. Change the host to "127.0.0.1" and the port number to whatever port number you have given in the annoatationtool.html at the end of the app.py file.
 4. Run ```python3 app.py ```
 
-Now in your browser go to the site localhost:5000
+Now in your browser go to the site localhost:portnumber
 
 The Annotation App is to manage the manuscripts annotations through an interactive GUI. Implemented in Flask, the App has useful features to annotate images from large manuscripts libraries.
 
