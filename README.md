@@ -31,6 +31,9 @@ This is the documentation for the Annotator App, The Viewer, setting up the data
         mysql -u localusername -p local databasename < dump.sql
        
  * Using SQL insert into the tables the data that you have.
+ * Insert images into the imagelinks table which has two columns filename and link of where the images is present. The images from this table are served upon requesting a new image.
+ * Images from the correction table are served when we are requesting for correcting the existing annotated images.
+ * If you have bookmarked certain imaegs then those images would be served from the bookmarks table upon requesting the existing annotated imaeges.
  * This database contains the data required and is now ready for the applications.
  
 ###  How to setup the Annotation App
